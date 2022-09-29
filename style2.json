@@ -1,0 +1,32 @@
+{
+  "version": 8,
+  "name": "perimeter",
+  "sources": {
+    "perimeter": {
+      "type": "geojson",
+      "data": "http://localhost:3000/map/perimeter"
+    }
+  },
+  "layers": [
+    {
+      "id": "color",
+      "type": "fill",
+      "source": "states",
+      "paint": {
+        "fill-color": "{color}",
+        "fill-opacity": 0.7
+      }
+    },
+    {
+      "id": "name",
+      "type": "symbol",
+      "source": "perimeter",
+      "minzoom": 4,
+      "layout": {
+        "text-field": "{name}",
+        "text-size": 12,
+        "text-font": ["Arial Normal", "sans-serif Normal"]
+      }
+    }
+  ]
+}
